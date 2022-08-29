@@ -33,7 +33,7 @@ const Result = () => {
             <Header>예비집사 판별기</Header>
             <Title>결과보기</Title>
             <LogoImage>
-                <img src={resultData.image} className="rounded-circle" width={350} height={350} />
+                <img src={resultData.image} className="rounded-circle" width={350} height={350} alt="result cat image" />
             </LogoImage>
             <Desc>예비 집사님과 찰떡궁합인 고양이는 {resultData.name}입니다. </Desc>
             <Button onClick={handleClickButton}>테스트 다시하기</Button>
