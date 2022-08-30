@@ -2,7 +2,7 @@ import React from "react";
 import Button from 'react-bootstrap/Button'
 const {Kakao} = window;
 
-const KakaoShareButton = () =>{
+const KakaoShareButton = ({data}) =>{
     const url = "https://catmbti0829.netlify.app"
     const resultUrl = window.location.href;
     console.log('aaa',resultUrl,url)
@@ -17,8 +17,8 @@ const KakaoShareButton = () =>{
           objectType: 'feed',
           content: {
             title: '예비집사 판별기 결과',
-            description: `예비 집사님이 고양이를 키운다면 가장 잘 맞는 고양이는?`,
-            imageUrl: 'https://mud-kage.kakao.com/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
+            description: `예비 집사님이 고양이를 키운다면 가장 잘 맞는 고양이는 ${data.name} 입니다`,
+            imageUrl: url + data.image,
             link: {
               mobileWebUrl: resultUrl,
               webUrl : resultUrl
